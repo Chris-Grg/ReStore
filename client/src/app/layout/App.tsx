@@ -1,8 +1,8 @@
-
-import Catalog from '../../features/catalog/Catalog.';
 import Header from './Header';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Container } from '@mui/material';
+import {Outlet} from 'react-router-dom';
+
 // import './App.css';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -27,7 +27,7 @@ const App = () => {
       <CssBaseline />
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
       <Container>
-        <Catalog />
+        <Outlet />
       </Container>
     </ThemeProvider>
   );
